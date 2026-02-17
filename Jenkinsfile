@@ -34,7 +34,7 @@ pipeline {
                     -Dsonar.projectKey=manishbad_sample-sonar-docker-app \
                     -Dsonar.organization=Manish_Organizarion \
                     -Dsonar.host.url=https://sonarcloud.io \
-                    -Dsonar.login=$SONAR_AUTH_TOKEN
+                    -Dsonar.login=$sonar-token
                     '''
                 }
             }
