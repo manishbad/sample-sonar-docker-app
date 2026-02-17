@@ -28,7 +28,7 @@ pipeline {
 
         stage('SonarCloud Analysis') {
             steps {
-                withSonarQubeEnv('SonarCloud') {
+                withSonarQubeEnv('SonarQubeScanner') {
                     sh '''
                     mvn sonar:sonar \
                     -Dsonar.projectKey=sample-sonar-docker-app \
