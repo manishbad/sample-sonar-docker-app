@@ -30,8 +30,8 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQubeScanner') {
                     sh '''
-                    mvn sonar:sonar \
-                    -Dsonar.projectKey=sample-sonar-docker-app \
+                    mvn clean verify sonar:sonar \
+                    -Dsonar.projectKey=manishbad_sample-sonar-docker-app \
                     -Dsonar.organization=Manish_Organizarion \
                     -Dsonar.host.url=https://sonarcloud.io \
                     -Dsonar.login=$SONAR_AUTH_TOKEN
